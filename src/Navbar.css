@@ -1,0 +1,38 @@
+.Nav {
+  background-color: black;
+  min-width: 12.5%;
+  max-width: 250px;
+  height: 100%;
+  color: white;
+}
+#nav-logo {
+  width: 60%;
+  display: block;
+  margin-left: 5px;
+  padding: 25px;
+  margin-right: auto;
+}
+
+.Fcards {
+  font-family: Arial;
+  width: 100%;
+  color: rgb(182, 182, 182);
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Fcards > h1 {
+  font-size: 1em;
+  margin-left: 10px;
+  padding: 15px;
+}
+
+.Fcards:hover {
+  color: white;
+}
+
+.is_selected {
+  background-color: rgba(138, 138, 138, 0.26);
+}
