@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { BsSearch } from "react-icons/bs";
 import { TiHomeOutline } from "react-icons/ti";
 import { VscLibrary } from "react-icons/vsc";
+import { FcLike } from "react-icons/fc";
+import { MdCreateNewFolder } from "react-icons/md";
 
-const Fcards = ({ icon, text, link, key }) => {
+const Fcards = ({ ...item }) => {
+  const { icon, text, link, key } = item;
+
   const [isSelected, setSelected] = useState(false);
 
   return (
@@ -20,11 +24,47 @@ const Fcards = ({ icon, text, link, key }) => {
     </div>
   );
 };
-
+const Playlist = ({ ...data }) => {
+  const { text, link } = data;
+  return <h1 className="p-card">{text}</h1>;
+};
 const features = [
   { id: 1, icon: <TiHomeOutline />, text: "Home", link: "/Home" },
   { id: 2, icon: <BsSearch />, text: "Search", link: "/Search" },
   { id: 3, icon: <VscLibrary />, text: "Your Library", link: "/Playlists" },
+];
+const Playlist_data = [
+  { text: "Playlist 1", link: "/Home" },
+  { text: "Playlist 2", link: "/Search" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
+  { text: "Playlist 2222", link: "/Playlists" },
+  { text: "Playlist 3", link: "/Playlists" },
 ];
 
 function Navbar() {
@@ -37,15 +77,34 @@ function Navbar() {
       />
       <div className="side-features">
         {features.map((item) => (
-          <Fcards
-            icon={item.icon}
-            text={item.text}
-            link={item.link}
-            id={item.id}
-          />
+          <Fcards {...item} />
         ))}
+      </div>
 
-        {/* <Fcards data={features} /> */}
+      <div className="side-features" id="side-features-2">
+        <Fcards
+          {...{
+            id: 4,
+            icon: <MdCreateNewFolder />,
+            text: "Create Playlist",
+            link: "/Create_Playlist",
+          }}
+        />
+
+        <Fcards
+          {...{
+            id: 5,
+            icon: <FcLike />,
+            text: "Liked Songs",
+            link: "/Liked_Songs",
+          }}
+        />
+      </div>
+
+      <div className="playlist">
+        {Playlist_data.map((item) => (
+          <Playlist {...item} />
+        ))}
       </div>
     </div>
   );
