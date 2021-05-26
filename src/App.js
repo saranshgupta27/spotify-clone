@@ -37,12 +37,12 @@ function App() {
         });
       }
       getPlaylist(_token);
-      // spotify.getUserPlaylists().then((playlists) => {
-      //   dispatch({
-      //     type: "SET_PLAYLISTS",
-      //     playlists,
-      //   });
-      // });
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists,
+        });
+      });
     }
   }, [token, dispatch]);
 

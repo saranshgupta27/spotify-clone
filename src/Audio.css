@@ -3,4 +3,60 @@
   height: 10%;
   background-color: #181818;
   border-top: 0.5px solid rgb(63, 62, 62);
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.track {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.like-button {
+  margin-left: 20px;
+}
+.track,
+.media_info,
+.side-options,
+.like-button > *:hover {
+  cursor: pointer;
+}
+.track,
+.media_info,
+.side-options > * {
+  margin-right: 2px;
+}
+
+.media_info {
+  width: max-content;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.album-img {
+  max-height: 70px;
+  margin-right: 20px;
+}
+.side-options {
+  width: 10%;
+  margin-right: 10px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.track-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.artist {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #bbbbbb;
 }
