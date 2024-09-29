@@ -1,7 +1,7 @@
 import api_key from "./env.js";
 
 export const authEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = window.location.origin + "/";
 const client_id = api_key;
 
 const scopes = [
