@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import "./Audio.css";
+import green from "@material-ui/core/colors/green";
+import DevicesIcon from "@material-ui/icons/Devices";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import FullscreenIcon from "@material-ui/icons/Fullscreen";
+import LoopIcon from "@material-ui/icons/Loop";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
 import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
-import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
-import green from "@material-ui/core/colors/green";
-import SkipNextIcon from "@material-ui/icons/SkipNext";
-import ShuffleIcon from "@material-ui/icons/Shuffle";
-import LoopIcon from "@material-ui/icons/Loop";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 import QueueMusicIcon from "@material-ui/icons/QueueMusic";
+import ShuffleIcon from "@material-ui/icons/Shuffle";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
+import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
-import FullscreenIcon from "@material-ui/icons/Fullscreen";
-import DevicesIcon from "@material-ui/icons/Devices";
+import React, { useState } from "react";
+import "./Audio.css";
 
 function Audio() {
-  const [mediaImg, setimg] = useState(
-    "https://i.scdn.co/image/ab67616d0000b273e7c85d5f2f3ca556be23437b"
-  );
-  const [trackname, settrack] = useState("HEHEHE SONG");
-  const [artist, setartist] = useState("HEHE SINGER");
-  const [isSelected, setSelected] = useState(false);
+
+const mediaImg="https://i.scdn.co/image/ab67616d0000b273e7c85d5f2f3ca556be23437b";
+const trackname="Song Name";
+const artist="Artist";
+const isSelected=false;
+
   const [shuffle, setShuffle] = useState(false);
   const [playing, setPlaying] = useState(false);
   return (
@@ -35,7 +35,6 @@ function Audio() {
       <div className="track">
         <ShuffleIcon
           style={isSelected ? { color: green[500] } : { color: "white" }}
-          onClick={() => setSelected(!isSelected)}
         />
         <SkipPreviousIcon />
         {playing ? (
